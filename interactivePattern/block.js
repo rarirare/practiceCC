@@ -10,8 +10,10 @@ class Block{
       noFill();
       stroke(this.c);
       push();
+    //   translate used to translate canva from the point given as argument
       translate(this.x,this.y);
-      if(this.angle>10  && this.angle<90){
+    //   when angle is more that o x should change to squre until it rotate to 90 degree.
+      if(this.angle>0  && this.angle<90){
         this.drawRect();
       }else{
         this.drawX();
@@ -36,6 +38,7 @@ class Block{
        if(this.angle>0 && this.angle<90){
          this.angle+=1;
          if(this.c>70){
+            // color value is going to be changed after rotation so we minused color value untill its 70
            this.c-=3    
            
          }
